@@ -1,0 +1,51 @@
+body {
+  background-color: #ffc832;
+}
+
+.scene {
+  height: 350px;
+  width: 250px;
+  perspective: 600px;
+  border: 5px solid #614b0e;
+  margin: auto;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  background-color: white;
+}
+
+.card {
+  height: 95%;
+  width: 95%;
+  position: relative;
+  transition: transform 2s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.card.isClicked {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  color: white;
+  border-radius: 6px;
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 250px;
+  text-align: center;
+}
+
+.face-front {
+  background-color: #e61e50;
+}
+
+.face-back {
+  background-color: #149b5f;
+  transform: rotateY(180deg);
+}

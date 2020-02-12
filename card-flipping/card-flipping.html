@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      Card Flipping
+    </title>
+    <link href="./style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="scene">
+      <div class="card">
+        <div class="card-face face-front">Front</div>
+        <div class="card-face face-back">Back</div>
+      </div>
+    </div>
+    <script>
+      const card = document.querySelector(".card");
+      card.addEventListener("click", () => {
+        card.classList.toggle("isClicked");
+      });
+    </script>
+  </body>
+</html>
