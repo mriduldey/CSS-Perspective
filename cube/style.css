@@ -1,0 +1,163 @@
+body {
+  background-color: #1b1b25;
+}
+
+.scene {
+  height: 500px;
+  width: 500px;
+  margin: auto;
+  margin-top: 90px;
+  perspective: 350px;
+  display: flex;
+  position: relative;
+  z-index: 3;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid red;
+  border-radius: 50%;
+  color: white;
+  background-color: #080811;
+}
+
+.cube {
+  height: 250px;
+  width: 250px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: translateZ(-125px);
+  transition: transform 2s;
+}
+
+.cube.show-front {
+  transform: translateZ(-125px) rotateY(0deg);
+}
+
+.cube.show-back {
+  transform: translateZ(-125px) rotateY(-180deg);
+}
+
+.cube.show-left {
+  transform: translateZ(-125px) rotateY(90deg);
+}
+
+.cube.show-right {
+  transform: translateZ(-125px) rotateY(-90deg);
+}
+
+.cube.show-top {
+  transform: translateZ(-125px) rotateX(-90deg);
+}
+
+.cube.show-bottom {
+  transform: translateZ(-125px) rotateX(90deg);
+}
+
+.cube-face {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  line-height: 250px;
+  font-size: 50px;
+  font-weight: 600;
+  color: #ffffff7c;
+  text-align: center;
+}
+
+/* we can remove this .cube-face-front as it has no effect. It has been only used for consistency. */
+.cube-face-front {
+  transform: rotateY(0deg) translateZ(125px);
+  background-color: #2dbdbcaa;
+}
+
+.cube-face-back {
+  transform: rotateY(180deg) translateZ(125px);
+  background-color: #ffc832aa;
+}
+
+.cube-face-left {
+  transform: rotateY(-90deg) translateZ(125px);
+  background-color: #149b5faa;
+}
+
+.cube-face-right {
+  transform: rotateY(90deg) translateZ(125px);
+  background-color: #e61e50aa;
+}
+
+.cube-face-top {
+  transform: rotateX(90deg) translateZ(125px);
+  background-color: #0f69afaa;
+}
+
+.cube-face-bottom {
+  transform: rotateX(-90deg) translateZ(125px);
+  background-color: #7c0fafaa;
+}
+
+.radio-group {
+  height: 450px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 1;
+  top: 18.5%;
+  left: 20%;
+  border-left: 2px solid red;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  background-color: #080811c9;
+}
+
+.radio-group label {
+  color: #ffc832;
+  font-size: 20px;
+  font-weight: 500;
+  position: absolute;
+}
+
+.radio-group label:first-child {
+  top: 30px;
+  left: 80px;
+}
+
+.radio-group label:nth-child(2) {
+  top: 100px;
+  left: 30px;
+}
+
+.radio-group label:nth-child(3) {
+  top: 175px;
+  left: 10px;
+}
+
+.radio-group label:nth-child(4) {
+  top: 250px;
+  left: 10px;
+}
+
+.radio-group label:nth-child(5) {
+  top: 335px;
+  left: 30px;
+}
+
+.radio-group label:last-child {
+  top: 405px;
+  left: 87px;
+}
+
+.radio-group label:hover {
+  font-size: 23px;
+}
+
+.hide-radio-group-right {
+  background-color: #1b1b25;
+  height: 550px;
+  width: 550px;
+  margin: auto;
+  position: absolute;
+  top: 9.9%;
+  left: 29.6%;
+  border-radius: 50%;
+  z-index: 2;
+}

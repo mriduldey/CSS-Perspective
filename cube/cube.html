@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      3D Cube
+    </title>
+    <link href="./style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="scene">
+      <div class="cube">
+        <div class="cube-face cube-face-front">Front</div>
+        <div class="cube-face cube-face-back">Back</div>
+        <div class="cube-face cube-face-left">Left</div>
+        <div class="cube-face cube-face-right">Right</div>
+        <div class="cube-face cube-face-top">Top</div>
+        <div class="cube-face cube-face-bottom">Bottom</div>
+      </div>
+    </div>
+    <div class="radio-group">
+      <label>
+        <input type="radio" name="rotate-cube" value="front" checked />Front
+      </label>
+      <label>
+        <input type="radio" name="rotate-cube" value="back" />Back
+      </label>
+      <label>
+        <input type="radio" name="rotate-cube" value="left" />Left
+      </label>
+      <label>
+        <input type="radio" name="rotate-cube" value="right" />Right
+      </label>
+      <label> <input type="radio" name="rotate-cube" value="top" />Top </label>
+      <label>
+        <input type="radio" name="rotate-cube" value="bottom" />Bottom
+      </label>
+    </div>
+    <div class="hide-radio-group-right"></div>
+    <script>
+      const radioGroup = document.querySelector(".radio-group");
+      const cube = document.querySelector(".cube");
+      let currentClass = "";
+      radioGroup.addEventListener("change", () => {
+        const selectedRadioButton = radioGroup.querySelector(":checked");
+        if (currentClass) {
+          cube.classList.remove(currentClass);
+        }
+        currentClass = "show-" + selectedRadioButton.value;
+        cube.classList.add(currentClass);
+      });
+    </script>
+  </body>
+</html>
