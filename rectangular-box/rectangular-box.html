@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      3D Box
+    </title>
+    <link href="./style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="box-wrapper">
+      <div class="scene">
+        <div class="box">
+          <div class="box-face face-front">Front</div>
+          <div class="box-face face-back">Back</div>
+          <div class="box-face face-left">Left</div>
+          <div class="box-face face-right">Right</div>
+          <div class="box-face face-top">Top</div>
+          <div class="box-face face-bottom">Bottom</div>
+        </div>
+      </div>
+      <div class="radio-group">
+        <label>
+          <input type="radio" name="rotate-box" value="front" checked /><span
+            >Front</span
+          >
+        </label>
+        <label>
+          <input type="radio" name="rotate-box" value="back" /><span>Back</span>
+        </label>
+        <label>
+          <input type="radio" name="rotate-box" value="left" /><span>Left</span>
+        </label>
+        <label>
+          <input type="radio" name="rotate-box" value="right" /><span
+            >Right</span
+          >
+        </label>
+        <label>
+          <input type="radio" name="rotate-box" value="top" /><span>Top</span>
+        </label>
+        <label>
+          <input type="radio" name="rotate-box" value="bottom" /><span
+            >Bottom</span
+          >
+        </label>
+      </div>
+    </div>
+    <script>
+      const radioGroup = document.querySelector(".radio-group");
+      const box = document.querySelector(".box");
+      let currentClass = "";
+      radioGroup.addEventListener("change", () => {
+        const selectedRadioButton = radioGroup.querySelector(":checked");
+        if (currentClass) {
+          box.classList.remove(currentClass);
+        }
+        currentClass = "show-" + selectedRadioButton.value;
+        box.classList.add(currentClass);
+      });
+    </script>
+  </body>
+</html>

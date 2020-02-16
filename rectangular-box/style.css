@@ -1,0 +1,151 @@
+.scene {
+  height: 500px;
+  width: 500px;
+  perspective: 500px;
+  background-color: #1b1b1b;
+  border: 2px solid red;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  height: 250px;
+  width: 150px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: translateZ(-30px);
+  transition: 2s;
+}
+
+.box.show-front {
+  transform: translateZ(-30px) rotateY(0deg);
+}
+
+.box.show-back {
+  transform: translateZ(-30px) rotateY(-180deg);
+}
+
+.box.show-left {
+  transform: translateZ(-75px) rotateY(90deg);
+}
+
+.box.show-right {
+  transform: translateZ(-75px) rotateY(-90deg);
+}
+
+.box.show-top {
+  transform: translateZ(-125px) rotateX(-90deg);
+}
+
+.box.show-bottom {
+  transform: translateZ(-125px) rotateX(90deg);
+}
+
+.box-face {
+  position: absolute;
+  color: #000;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.face-front,
+.face-back {
+  height: 250px;
+  width: 150px;
+}
+
+.face-left,
+.face-right {
+  font-size: 20px;
+  height: 250px;
+  width: 60px;
+  left: 45px;
+}
+
+.face-top,
+.face-bottom {
+  height: 60px;
+  width: 150px;
+  top: 95px;
+}
+
+.face-front {
+  transform: rotateY(0deg) translateZ(30px);
+  background-color: #2dbdbcaa;
+  line-height: 250px;
+}
+
+.face-back {
+  transform: rotateY(180deg) translateZ(30px);
+  background-color: #ffc832aa;
+  line-height: 250px;
+}
+
+.face-left {
+  transform: rotateY(-90deg) translateZ(75px);
+  background-color: #149b5faa;
+  line-height: 250px;
+}
+
+.face-right {
+  transform: rotateY(90deg) translateZ(75px);
+  background-color: #e61e50aa;
+  line-height: 250px;
+}
+
+.face-top {
+  transform: rotateX(90deg) translateZ(125px);
+  background-color: #0f69afaa;
+  line-height: 60px;
+}
+
+.face-bottom {
+  transform: rotateX(-90deg) translateZ(125px);
+  background-color: #2dbdbcaa;
+  line-height: 60px;
+}
+
+/* ______extra styling________ */
+
+body {
+  height: 100vh;
+  margin: 0px;
+  background-color: #1b1b1bf8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-wrapper {
+  min-height: 500px;
+  max-height: 600px;
+  width: 650px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+}
+
+.radio-group {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  color: #ffc832ad;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+label:hover {
+  margin-bottom: 26px;
+}
+label:hover,
+input[type="radio"]:checked + span {
+  font-size: 20px;
+  color: #ffc832;
+}

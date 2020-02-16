@@ -15,7 +15,6 @@ body {
   align-items: center;
   border: 2px solid red;
   border-radius: 50%;
-  color: white;
   background-color: #080811;
 }
 
@@ -59,7 +58,7 @@ body {
   line-height: 250px;
   font-size: 50px;
   font-weight: 600;
-  color: #ffffff7c;
+  color: black;
   text-align: center;
 }
 
