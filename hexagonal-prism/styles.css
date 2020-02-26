@@ -1,0 +1,67 @@
+.scene {
+  height: 500px;
+  width: 500px;
+  perspective: 500px;
+  background-color: #1b1b1b;
+  border: 2px solid red;
+  border-radius: 6px;
+}
+
+.prism {
+  margin: 100px 150px 100px 150px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: translate3d(0, 0, -173px);
+  transition: 2s;
+}
+
+.prism-face {
+  position: absolute;
+  width: 200px;
+  height: 300px;
+  color: #000;
+  text-align: center;
+  line-height: 300px;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.face-front {
+  transform: rotateY(0deg) translate3d(0, 0, 173px);
+  background-color: #2dbdbcaa;
+}
+
+.face-back {
+  transform: rotateY(180deg) translate3d(0, 0, 173px);
+  background-color: #ffc832aa;
+}
+
+.face-left-front {
+  transform: rotateY(-60deg) translate3d(0, 0, 173px);
+  background-color: #149b5faa;
+}
+
+.face-left-back {
+  transform: rotateY(-120deg) translate3d(0, 0, 173px);
+  background-color: #149b5faa;
+}
+
+.face-right-front {
+  transform: rotateY(60deg) translate3d(0, 0, 173px);
+  background-color: #e61e50aa;
+}
+
+.face-right-back {
+  transform: rotateY(120deg) translate3d(0, 0, 173px);
+  background-color: #e61e50aa;
+}
+
+.face-top {
+  transform: rotateX(90deg) translate3d(0, 0, 173px);
+  background-color: #0f69afaa;
+}
+
+.face-bottom {
+  transform: rotateX(-90deg) translate3d(0, 0, 150px);
+  background-color: #2dbdbcaa;
+}
