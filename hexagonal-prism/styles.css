@@ -17,13 +17,59 @@
 
 .prism-face {
   position: absolute;
-  width: 200px;
-  height: 300px;
   color: #000;
   text-align: center;
-  line-height: 300px;
   font-size: 40px;
   font-weight: 600;
+}
+
+.face-front,
+.face-back,
+.face-left-front,
+.face-right-front,
+.face-left-back,
+.face-right-back {
+  line-height: 300px;
+  width: 200px;
+  height: 300px;
+}
+
+.face-top,
+.face-bottom {
+  top: -23px;
+  height: 346px;
+  width: 200px;
+  line-height: 346px;
+}
+
+.face-top::before,
+.face-bottom::before,
+.face-top::after,
+.face-bottom::after {
+  content: "";
+  position: absolute;
+  border-bottom: 173px solid transparent;
+  border-top: 173px solid transparent;
+}
+
+.face-top::before {
+  right: 100%;
+  border-right: 100.35px solid #0f69afaa;
+}
+
+.face-top::after {
+  left: 100%;
+  border-left: 100.35px solid #0f69afaa;
+}
+
+.face-bottom::before {
+  right: 100%;
+  border-right: 100.35px solid #2dbcbdaa;
+}
+
+.face-bottom::after {
+  left: 100%;
+  border-left: 100.35px solid #2dbcbdaa;
 }
 
 .face-front {
@@ -57,7 +103,7 @@
 }
 
 .face-top {
-  transform: rotateX(90deg) translate3d(0, 0, 173px);
+  transform: rotateX(90deg) translate3d(0, 0, 150px);
   background-color: #0f69afaa;
 }
 
