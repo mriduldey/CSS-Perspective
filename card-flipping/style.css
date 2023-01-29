@@ -33,6 +33,7 @@ body {
   height: 100%;
   width: 100%;
   position: absolute;
+  backface-visibility: hidden;
   color: white;
   border-radius: 6px;
   font-size: 50px;
